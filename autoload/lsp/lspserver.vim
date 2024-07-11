@@ -795,7 +795,7 @@ def GotoSymbolLoc(lspserver: dict<any>, msg: string, peekSymbol: bool,
     if count == 0
       # When there are multiple symbol locations, and a specific one isn't
       # requested with 'count', display the locations in a location list.
-      if result->len() > 1
+      if result->len() > 0
         var title: string = ''
         if msg == 'textDocument/declaration'
           title = 'Declarations'
